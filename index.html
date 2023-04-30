@@ -1,29 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Google Map Example</title>
+    <title>DoubleMap Clone</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <style>
+        @font-face {
+            font-family: 'Open Sans Extra Bold';
+            src: url('path/to/OpenSans-ExtraBold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
         #map {
-            height: 100%;
-            width: 60%;
-            float: right;
+            height: 400px;
+            width: 70%;
+            border: 1px solid #ccc;
+            font-family: 'Open Sans Extra Bold', sans-serif;
         }
     </style>
 </head>
 <body>
-    <div id="map">
-        <script>
-        var map;
+    <div id="map"></div>
+    <script>
         function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -34.397, lng: 150.644},
-                zoom: 8
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 39.7684, lng: -86.1581},
+                zoom: 12
             });
         }
-        </script>
-        <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvTry6RgHatGai_J7kt66sA5chXzhkghY&callback=initMap">
     </script>
-    </div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+</head>
+<body onload="initMap()">
+    <header>
+        <h1>DoubleMap Clone</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Real-Time Tracking</h2>
+            <p>Our transportation tracking system provides real-time information about buses, shuttles, and other transportation services.</p>
+            <a href="#" class="button">Learn More</a>
+        </section>
+        <section>
+            <h2>Mobile App</h2>
+            <p>Our mobile app allows you to track your transportation in real-time, view schedules, and receive alerts.</p>
+            <a href="#" class="button">Download Now</a>
+        </section>
+        <section>
+            <h2>Customer Support</h2>
+            <p>Our customer support team is available 24/7 to answer your questions and provide assistance.</p>
+            <a href="#" class="button">Contact Us</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2021 DoubleMap Clone. All rights reserved.</p>
+    </footer>
 </body>
 </html>

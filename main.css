@@ -1,5 +1,102 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans Extra Bold', sans-serif;
+  font-weight: bold;
+}
+
+nav a, .button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+header {
+  background-color: #0072c6;
+  color: #fff;
+  padding: 20px;
+}
+
+nav {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #0072c6;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+section {
+  flex-basis: 30%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+section h2 {
+  margin-bottom: 10px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #0072c6;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: #005ea2;
+}
+
+footer {
+  background-color: #0072c6;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Map styles */
 #map {
-    height: 100%;
-    width: 60%;
-    float: right;
-  }
+  height: 400px;
+  width: 100%;
+  border: 1px solid #ccc;
+  float: left;
+  margin-top: 20px;
+}
