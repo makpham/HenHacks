@@ -11,10 +11,11 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #333;
+  background-color: #e6f2ff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans Extra Bold', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
 }
 
@@ -36,21 +37,35 @@ nav {
 
 nav ul {
   list-style: none;
-  display: flex;
-  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 nav li {
-  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 nav a {
+  display: block;
+  padding: 10px;
   color: #333;
   text-decoration: none;
+  background-color: #f2f2f2;
 }
 
-nav a:hover {
-  color: #0072c6;
+nav .accordion-content {
+  display: none;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+nav .accordion li:hover a {
+  background-color: #ccc;
+}
+
+nav .accordion li:hover .accordion-content {
+  display: block;
 }
 
 main {
@@ -86,17 +101,22 @@ section h2 {
 }
 
 footer {
-  background-color: #0072c6;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: left;
+  line-height: 100px;
 }
 
 /* Map styles */
 #map {
-  height: 400px;
-  width: 100%;
-  border: 1px solid #ccc;
-  float: left;
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  top: 0;
+  right: 0;
   margin-top: 20px;
+  margin-right: 20px;
+  border: 1px solid #ccc;
 }

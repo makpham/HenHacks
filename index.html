@@ -1,69 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>DoubleMap Clone</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        @font-face {
-            font-family: 'Open Sans Extra Bold';
-            src: url('path/to/OpenSans-ExtraBold.ttf') format('truetype');
-            font-weight: bold;
-            font-style: normal;
-        }
-        #map {
-            height: 400px;
-            width: 70%;
-            border: 1px solid #ccc;
-            font-family: 'Open Sans Extra Bold', sans-serif;
-        }
-    </style>
-</head>
-<body>
-    <div id="map"></div>
-    <script>
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 39.7684, lng: -86.1581},
-                zoom: 12
-            });
-        }
-    </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-    </script>
+  <title>Delaware Direct</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+  </style>
+
+  <style>
+    body {
+        background-color: #e6f2ff;
+      }
+
+    #map {
+      height: 100%;
+      width: 60%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 20px;
+      margin-right: 20px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        text-align: left;
+        line-height: 100px;
+    }
+  </style>
 </head>
 <body onload="initMap()">
-    <header>
-        <h1>DoubleMap Clone</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h2>Real-Time Tracking</h2>
-            <p>Our transportation tracking system provides real-time information about buses, shuttles, and other transportation services.</p>
-            <a href="#" class="button">Learn More</a>
-        </section>
-        <section>
-            <h2>Mobile App</h2>
-            <p>Our mobile app allows you to track your transportation in real-time, view schedules, and receive alerts.</p>
-            <a href="#" class="button">Download Now</a>
-        </section>
-        <section>
-            <h2>Customer Support</h2>
-            <p>Our customer support team is available 24/7 to answer your questions and provide assistance.</p>
-            <a href="#" class="button">Contact Us</a>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2021 DoubleMap Clone. All rights reserved.</p>
-    </footer>
-</body>
+  <header>
+    <h1>Delaware Transportation Portal</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Mobile App</h2>
+      <p>Our mobile app allows you to track your transportation </p>
+      <p>in real-time, view schedules, and receive alerts.</p>
+      <a href="#" class="button">Download Now</a>
+    </section>
+    <section>
+      <h2>Customer Support</h2>
+      <p>Our customer support team is available 24/7 to answer </p>
+      <p></p>your questions and provide assistance.</p>
+      <a href="#" class="button">Contact Us</a>
+    </section>
+  </main>
+  <div id="map">
+    <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 39.397, lng: -75.644},
+        zoom: 10
+      });
+    }
+
+    var marker = new google.maps.Marker({
+      position: {lat: 39.68236, long: -75.58657},
+      map: map,
+    })
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvTry6RgHatGai_J7kt66sA5chXzhkghY&callback=initMap">
+  </script>
+  </div>
+  <footer>
+    <p>&copy; 2023 Delaware Transport. All rights reserved.</p>
+  </footer>
 </html>
