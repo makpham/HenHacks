@@ -1,1 +1,29 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Map Example</title>
+    <style>
+        #map {
+            height: 100%;
+            width: 60%;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="map">
+        <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+            });
+        }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvTry6RgHatGai_J7kt66sA5chXzhkghY&callback=initMap">
+    </script>
+    </div>
+</body>
+</html>
